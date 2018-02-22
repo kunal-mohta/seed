@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Seed</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <script src="codemirror/lib/codemirror.js"></script>
 </head>
 <body>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
@@ -21,5 +23,9 @@
     <script src="/third_party/bundle.min.js"></script>
     <script src="/js/core.js"></script>
     <script src="/js/editor.js"></script>
+    <script>
+      var editorArea = document.getElementsByClassName('editor__area')[0];
+      var sketchEditor = CodeMirror.fromTextArea(editorArea,{lineNumbers:true});
+    </script>
 </body>
 </html>
